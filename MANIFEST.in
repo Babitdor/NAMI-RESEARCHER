@@ -1,0 +1,22 @@
+# Include documentation files
+include README.md
+include LICENSE
+include CLI_README.md
+include CLI_QUICK_REFERENCE.md
+include SETUP_CLI.md
+include STRATEGY_USAGE_GUIDE.md
+
+# Include configuration examples
+include .env.example
+graft src
+
+# Exclude unnecessary files
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude __pycache__
+global-exclude .DS_Store
+global-exclude *.so
+global-exclude *.egg-info
+prune tests
+prune venv
+prune .git
